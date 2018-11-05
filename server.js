@@ -35,7 +35,7 @@ module.exports = function (options) {
             type: true,
             message: `登录成功`,
             email,
-            password,
+            username: email.split('@')[0],
           }
           resolve(msg)
         }
