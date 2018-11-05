@@ -1,6 +1,6 @@
 {
-  "name": "yapi-plugin-qsso",
-  "version": "1.1.0",
+  "name": "yapi-plugin-ldapmail",
+  "version": "0.0.1",
   "description": "",
   "main": "index.js",
   "scripts": {
@@ -8,12 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/YMFE/yapi-plugin-qsso.git"
+    "url": "git+https://github.com/ygmpkk/yapi-plugin-ldapmail.git"
   },
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/YMFE/yapi-plugin-qsso/issues"
+    "url": "https://github.com/ygmpkk/yapi-plugin-ldapmail/issues"
   },
-  "homepage": "https://github.com/YMFE/yapi-plugin-qsso#readme"
+  "homepage": "https://github.com/ygmpkk/yapi-plugin-ldapmail#readme",
+  "dependencies": {
+    "ldapjs": "^1.0.2"
+  }
 }
