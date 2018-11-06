@@ -1,13 +1,25 @@
 const ldap = require('ldapjs')
 
 module.exports = function (options) {
-  const { server } = options
+  const { server, allowed_domains } = options
   let msg = {}
 
   this.bindHook('third_login', (ctx) => {
     const { email, password } = ctx.request.body
 
     return new Promise((resolve, reject) => {
+      if (allowed_domains) {
+        const domain = email.split('@')[1]
+        const allowed = allowed_domains.replace('，', ',').split(',').map(item => item.trim())
+        if (!allowed.find(item => item === domain)) {
+          msg = {
+            type: false,
+            message: '域名不在白名单内',
+          }
+          return reject(msg)
+        }
+      }
+
       const client = ldap.createClient({
         url: server
       })

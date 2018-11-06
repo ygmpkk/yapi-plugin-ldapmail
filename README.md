@@ -9,7 +9,9 @@
     {
       "name": "ldapmail",
       "options": {
-        "server": "ldaps:/LDAP"
+        "server": "ldaps:/LDAP",
+        "allowed_domains": "foo.com, bar.com",
+        "hide_login": true
       }
     }
   ]

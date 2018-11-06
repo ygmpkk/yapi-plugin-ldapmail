@@ -11,6 +11,7 @@
     "url": "git+https://github.com/ygmpkk/yapi-plugin-ldapmail.git"
   },
   "files": [
+    "style.css",
     "index.js",
     "client.js",
     "server.js",
